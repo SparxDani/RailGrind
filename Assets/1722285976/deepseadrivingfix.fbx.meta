@@ -1,0 +1,404 @@
+fileFormatVersion: 2
+guid: 3a2fca22a4e0d55459055625f5ab305d
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BrushedMetal_03_G
+    second: {fileID: 2100000, guid: c34a3b73c5f73524689b1ec77064d9c3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: C1_FireZone_Lava
+    second: {fileID: 2100000, guid: f582d73ced7a5a4458abd075a9ee8940, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: C1_Lava01_C
+    second: {fileID: 2100000, guid: 81f2e4f48ed613b43b8cf4892fff8fce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: C1_Metal_Trim02_C
+    second: {fileID: 2100000, guid: 162e4866db15e9c468a999f4f673b1fb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: C1_PalmLeaf01_C
+    second: {fileID: 2100000, guid: beea69bf60567424ea740c9c24535088, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: C1_Path_Glow_Blue_C
+    second: {fileID: 2100000, guid: 3c7b00385616f654c819caaad5afe197, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: C1_Path_Glow_C
+    second: {fileID: 2100000, guid: 6ab8d92ce0d41c14aba47bbffcb0a404, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: C1_Water01_N
+    second: {fileID: 2100000, guid: 574f3a0f3f76a3d4baea451cd8eac7b7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: C1_dirttile01_C
+    second: {fileID: 2100000, guid: 7c3a067d6c3df73429bf1d307c75d0ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: C1_glass_01_C
+    second: {fileID: 2100000, guid: ee59ab5747f530449852c68406d0f180, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: C3_Sea_CoralFan03_D
+    second: {fileID: 2100000, guid: 734491452bb46e64fbd39005a45864f8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: C3_Sea_KelpLeaves01_D
+    second: {fileID: 2100000, guid: 7bc8ee97509b7db40aad76f60e4d5259, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: C3_Sea_Rock01_c
+    second: {fileID: 2100000, guid: f0becba17d466fb4e8d498bd0d797e83, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: C3_Sea_RockEdge01_C
+    second: {fileID: 2100000, guid: c6a1a3228987ad2418e442b388b116e3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: C3_Sea_SandUnderwater01_c
+    second: {fileID: 2100000, guid: 1b6385491f584ce4491e92b29da4cd26, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: C3_metal_trim_rust_yellow_c
+    second: {fileID: 2100000, guid: 9a8ce81484749614eb10583308d019ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: C3_paint_generic_1_C
+    second: {fileID: 2100000, guid: bfaa27cb133e6244cb8ac211881a8893, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GLASS2
+    second: {fileID: 2100000, guid: 781a612976cefcd4da070ff2566624bf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OCT_Turbo_Pad
+    second: {fileID: 2100000, guid: 95a799ee57e37904182cc8f44edc0f91, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rib_Cage_01a_C
+    second: {fileID: 2100000, guid: 567c515787f00284c9018272da5e7af8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rust_Copper_C
+    second: {fileID: 2100000, guid: 1d80121d20c054d4494eeff904c41e2b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rust_Copper_Purple
+    second: {fileID: 2100000, guid: ae685ace7901cef42bf9d1decf009687, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SeaWorm_C
+    second: {fileID: 2100000, guid: e007efd691ec2954796bbb9f69f654bf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T111_Startline_C
+    second: {fileID: 2100000, guid: c751b24f9375aca429f1c9635ced1ace, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T112_Metal_Plate_Ground_02_C
+    second: {fileID: 2100000, guid: 24a035b3b1deb374d9ec3d9e270fd8a2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T112_Metal_Plate_Ground_02_C.001
+    second: {fileID: 2100000, guid: 41f2536c37cdcd244a04a1193072e4f2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T112_Rock_Set_01a_C
+    second: {fileID: 2100000, guid: 2e39d8d34cf791c45ba86eab2c882665, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T112_Rockwall_02b_C
+    second: {fileID: 2100000, guid: d01224f6d8d137f4e94838c7b798ff72, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T112_Skull_BaseColor
+    second: {fileID: 2100000, guid: 3881210a92c80cf409d94f63d94f1c2f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T112_Skull_Teeth_BaseColor
+    second: {fileID: 2100000, guid: 062ccec4493bcd54785424a25ffcfb73, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T112_rib_cage_C
+    second: {fileID: 2100000, guid: 5e2132d1485f899489cad9394f39dfb6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T113_Dry_Sand_c
+    second: {fileID: 2100000, guid: 6451430f302a73240a1ecd0181991173, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T113_Stalactites_02_Diffuse
+    second: {fileID: 2100000, guid: 9a03ae3a7aba1a44d8b3b3e9a4e21a4e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T113_Volcanic_Rock_02_C
+    second: {fileID: 2100000, guid: 4879a5aac0ba4ec4195b9a5d907f9f2a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T113_Volcanic_Rock_02_Wet_C
+    second: {fileID: 2100000, guid: 272108c38a8547a428763b3aca983111, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T114_MetalStoneTrim_C
+    second: {fileID: 2100000, guid: 91ddfbb7fad5b564db7fc328066ac4e2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T142_Ground_Sand_02a_C
+    second: {fileID: 2100000, guid: f2347ee953f2a0140a8b830d7a841ee5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T142_Mud_Track_07_C
+    second: {fileID: 2100000, guid: 66567f66563778644a1eeeb749972464, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T211_SandTrack_C
+    second: {fileID: 2100000, guid: 911f34ba950c4014da556f2fcbc1a06a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T223_Deep_Sea_Driving!Clam_C
+    second: {fileID: 2100000, guid: 13bd6b926acbbb64581831bdf5d8b7fe, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T223_Metal_floor_Verdigris
+    second: {fileID: 2100000, guid: 9cab10ace67022041ad1cc43ea5ddae9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T223_Mushroom_IntroCavern_C
+    second: {fileID: 2100000, guid: d396f591bb0f36945bd17ee2cd8cdc0a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T223_RockCliff_01_N
+    second: {fileID: 2100000, guid: 09609782e3979d545ac2d0e0e3dbddb8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T223_Rockwall_02_test_C
+    second: {fileID: 2100000, guid: 5f5d73016f277c84990c67a4d56eb0d1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T223_Rubber_01_C
+    second: {fileID: 2100000, guid: 4ddb23d74b58ed14eb754468d3b16177, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T223_Rust_Copper_C
+    second: {fileID: 2100000, guid: 253449679cea90648b93e90de3496b7b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T223_Rust_Copper_C_v2
+    second: {fileID: 2100000, guid: 04377fa9e77660445a3d1a7c0a8b4ea6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T223_SandRocky_01_C
+    second: {fileID: 2100000, guid: 936bacf93205ede4b88d0a7fca1121ad, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T223_Sand_01_C
+    second: {fileID: 2100000, guid: 9ead346bd474e9748905b34f21390ad5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: T223_Spike_C
+    second: {fileID: 2100000, guid: c768fa923966be34d80dbd341b99b738, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tentacle_Main_C
+    second: {fileID: 2100000, guid: 5872864247dbc1b45acf5365759e0b12, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: VertexColorLight
+    second: {fileID: 2100000, guid: a7d46a6b5651503489d94b42c8a674ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pearl
+    second: {fileID: 2100000, guid: 3173696973313b1478f57aee80b830ee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: redlight
+    second: {fileID: 2100000, guid: c643c86a1c0a7554fba838f2f87f4433, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: templeFolliage_Leaves_c
+    second: {fileID: 2100000, guid: f592048dd9e4c2548bda623f8b7cbfba, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vertexcolor
+    second: {fileID: 2100000, guid: 5e70f7d73b23238469dfa1f84fc65a55, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vertexcolordiffuse
+    second: {fileID: 2100000, guid: 6ea3af7aa4feda4468b5dd75cf7966f6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vertexcolorglass
+    second: {fileID: 2100000, guid: 57faac0e091b90749af18618b56b8dc6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: vertexcolorglass2
+    second: {fileID: 2100000, guid: 2aded6c5e0d9c744f9d2d4f139348bf9, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
