@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3b41fa58687e7004fa75d45f3550d9d8
+guid: e48ee0f1a1432e84dbf7d884f2453c0c
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,78 +7,43 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: baracking
-    second: {fileID: 2100000, guid: b56a0032f32cac9479b5716c49a58d08, type: 2}
+      name: Body
+    second: {fileID: 2100000, guid: 86140eba33a86c2409ce1cb0ace635e5, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: body
-    second: {fileID: 2100000, guid: adc82e5b8645bcf4482feaf23c46b623, type: 2}
+      name: ID1_Paint
+    second: {fileID: 2100000, guid: 24be58ef430bb2c4eb249d5143f7a24d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: body_yellow
-    second: {fileID: 2100000, guid: a9567494ccb6c514ca81031b9145af95, type: 2}
+      name: ID2_Metal
+    second: {fileID: 2100000, guid: 9f9a0d53875a7d142b1e1376695bace4, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: brake
-    second: {fileID: 2100000, guid: 6951db0695b81454cbfd3fcc85ecf5b3, type: 2}
+      name: ID3_Extra
+    second: {fileID: 2100000, guid: 9b142fd9e4a42604e9c96b824d737f4d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: carcase
-    second: {fileID: 2100000, guid: 99cfce64b166b3c46a41c01119c93586, type: 2}
+      name: ID4_Decal
+    second: {fileID: 2100000, guid: 7faf8241801919c42a5391736ea8d040, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: deep
-    second: {fileID: 2100000, guid: 760291d5956ae6d4a8813932798148d9, type: 2}
+      name: ID5_Sticker
+    second: {fileID: 2100000, guid: fa0e2cf47eadcd44abe44044fcdc9bc1, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: denim_metal
-    second: {fileID: 2100000, guid: d195642637840e243bcb8ca3fbd90d52, type: 2}
+      name: Trans
+    second: {fileID: 2100000, guid: a7884b82d04a1ec4b934030743b3ede8, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: helm
-    second: {fileID: 2100000, guid: 62043f6ed32d3bf4887f0f4d65c4df8d, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: logo
-    second: {fileID: 2100000, guid: dfe6c98525886684e9d956bf168ec293, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: metal
-    second: {fileID: 2100000, guid: d713158b877a8714e99a71655a6c3360, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: opassity
-    second: {fileID: 2100000, guid: aa2197306cf908e4ca837d22c827f5db, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: rim
-    second: {fileID: 2100000, guid: df76ea39d0b4eea4299d63f778becbcd, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: seat
-    second: {fileID: 2100000, guid: 4aed880228aec31449a9b9cfe79b83d9, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: tire
-    second: {fileID: 2100000, guid: c395bcb2713bf68438a01eb7c4224a6f, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: wire_217217217
-    second: {fileID: 2100000, guid: 2d95d06fb0f6c934f83eb2f513b4785d, type: 2}
+      name: moteur
+    second: {fileID: 2100000, guid: b86d1ccc625cf0141bdb5658646a6878, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
