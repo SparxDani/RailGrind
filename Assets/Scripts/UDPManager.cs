@@ -12,7 +12,7 @@ public class UDPManager : MonoBehaviour
 {
     IPEndPoint remoteEndPoint;
     UDPDATA mUDPDATA = new UDPDATA();
-    [SerializeField] private float rotSpeed = 5f; // Puedes ajustar este valor en el Inspector
+    [SerializeField] private float rotSpeed = 5f;
 
 
     private string IP;  
@@ -135,31 +135,59 @@ public class UDPManager : MonoBehaviour
 
     void CalcularRotacion()
     {
-        // Calcula el input basado en A y B (adelante/atrás y derecha/izquierda)
-        Vector3 targetDir = Vector3.zero;
-        targetDir += transform.forward * (A - 125); // Asume que 125 es el valor neutral
-        targetDir += transform.right * (B - 125); // Asume que 125 es el valor neutral
+        
 
-        // Normaliza la dirección para evitar movimientos erráticos
-        targetDir.Normalize();
+        Debug.Log("vehicle euler " + vehicle.eulerAngles);
 
-        // Asegura que no se modifique la dirección en el eje Y
-        targetDir.y = 0;
-
-        // Si no hay input, mantén la dirección actual
-        if (targetDir == Vector3.zero)
+        if (vehicle.eulerAngles.z > 0 && vehicle.eulerAngles.z < 180)
         {
-            targetDir = transform.forward;
+            B = Mathf.Lerp(B, 150, Time.deltaTime * SmoothEngine); 
+            C = Mathf.Lerp(C, 50, Time.deltaTime * SmoothEngine);
+        }
+        else if (vehicle.eulerAngles.z >= 180 && vehicle.eulerAngles.z <= 360)
+        {
+            B = Mathf.Lerp(B, 50, Time.deltaTime * SmoothEngine); 
+            C = Mathf.Lerp(C, 150, Time.deltaTime * SmoothEngine); 
         }
 
-        // Calcula la rotación objetivo
-        Quaternion targetRot = Quaternion.LookRotation(targetDir);
+        if (vehicle.eulerAngles.x > 0 && vehicle.eulerAngles.x < 180)
+        {
+            A = Mathf.Lerp(A, 150, Time.deltaTime * SmoothEngine); 
+        }
+        else if (vehicle.eulerAngles.x >= 180 && vehicle.eulerAngles.x <= 360)
+        {
+            A = Mathf.Lerp(A, 50, Time.deltaTime * SmoothEngine); 
+        }
 
-        // Interpola suavemente hacia la rotación objetivo
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, rotSpeed * Time.deltaTime);
+        if (A > 0)
+        {
+            if (B > 0 || C > 0)
+            {
+                float decrement = Time.deltaTime * SmoothEngine * (A / 100f);
+
+                if (B > 0)
+                    B = Mathf.Max(B - decrement, 0);
+
+                if (C > 0)
+                    C = Mathf.Max(C - decrement, 0);
+            }
+        }
     }
 
 
+
+
+    //Vector3 targetDir = Vector3.zero;
+    //targetDir += transform.forward * (A - 125);
+    //targetDir += transform.right * (B - 125);
+    //targetDir.Normalize();
+    //targetDir.y = 0;
+    //if (targetDir == Vector3.zero)
+    //{
+    //    targetDir = transform.forward;
+    //}
+    //Quaternion targetRot = Quaternion.LookRotation(targetDir);
+    //transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, rotSpeed * Time.deltaTime);
 
     void FixedUpdate()
     {
@@ -185,9 +213,9 @@ public class UDPManager : MonoBehaviour
             mUDPDATA.mAppDataField.PlayMotorB = HexB;
 
 
-            engineA.text = ((int)sliderA.value).ToString();
-            engineB.text = ((int)sliderB.value).ToString();
-            engineC.text = ((int)sliderC.value).ToString();
+            engineA.text = ((int)A).ToString();
+            engineB.text = ((int)B).ToString();
+            engineC.text = ((int)C).ToString();
 
             Data.text = "Data: " + mUDPDATA.GetToString();
 
@@ -221,28 +249,28 @@ public class UDPManager : MonoBehaviour
         return "000" + d.ToString("X");
     }
 
-    private void sendString(string message)
+    public void sendString(string message)
     {
 
-        try
-        {
-            // Bytes empfangen.
-            if (message != "")
-            {
+        //try
+        //{
+        //    // Bytes empfangen.
+        //    if (message != "")
+        //    {
 
-                //byte[] data = StringToByteArray(message);
-                print(message);
-                // Den message zum Remote-Client senden.
-                //client.Send(data, data.Length, remoteEndPoint);
+        //        //byte[] data = StringToByteArray(message);
+        //        //print(message);
+        //        // Den message zum Remote-Client senden.
+        //        //client.Send(data, data.Length, remoteEndPoint);
 
-            }
+        //    }
 
 
-        }
-        catch (Exception err)
-        {
-            print(err.ToString());
-        }
+        //}
+        //catch (Exception err)
+        //{
+        //    print(err.ToString());
+        //}
     }
 
     void OnDisable()
@@ -271,7 +299,7 @@ public class UDPManager : MonoBehaviour
         B = Mathf.Lerp(B, FinalValue, Time.deltaTime * 20f);
         B = Mathf.Clamp(B, 0, 200);
 
-        Debug.Log(B);
+        //Debug.Log(B);
 
         #region Axis WordSpace
         Gizmos.color = Color.blue;

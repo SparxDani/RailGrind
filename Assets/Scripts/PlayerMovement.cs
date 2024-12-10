@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -11,29 +9,42 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float rotSpeed = 5f;
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] CharacterController charController;
-    PlayerGrind grindScript;
+
+    private UDPManager udpManager;
+    private PlayerGrind grindScript;
 
     private void Start()
     {
         cameraObj = FindObjectOfType<Camera>().transform;
         charController = GetComponent<CharacterController>();
         grindScript = GetComponent<PlayerGrind>();
+
+        udpManager = FindObjectOfType<UDPManager>();
+        if (udpManager == null)
+        {
+            Debug.LogError("No se encontró un UDPManager en la escena.");
+        }
     }
+
     public void HandleMovement(InputAction.CallbackContext context)
     {
         Vector2 rawInput = context.ReadValue<Vector2>();
         input.x = rawInput.x;
         input.z = rawInput.y;
 
-        Debug.Log($"Entrada del jugador en hexadecimal: {BitConverter.ToString(BitConverter.GetBytes(rawInput.x))}");
-    }
+        string hexX = BitConverter.ToString(BitConverter.GetBytes(rawInput.x));
+        string hexZ = BitConverter.ToString(BitConverter.GetBytes(rawInput.y));
 
+        //string message = $"Input X (Hex): {hexX}, Input Z (Hex): {hexZ}";
+        //Debug.Log(message);
+        //udpManager?.sendString(message);
+    }
 
     private void Update()
     {
         if (!grindScript.onRail)
         {
-            //HandleRotation();
+            HandleRotation();
             Vector3 forward = cameraObj.forward;
             forward.y = 0;
             transform.forward = forward;
@@ -61,4 +72,3 @@ public class PlayerMovement : MonoBehaviour
         transform.rotation = playerRot;
     }
 }
-//This a very basic character controller, you do not need to use it.
