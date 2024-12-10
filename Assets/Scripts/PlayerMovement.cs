@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,7 +24,10 @@ public class PlayerMovement : MonoBehaviour
         Vector2 rawInput = context.ReadValue<Vector2>();
         input.x = rawInput.x;
         input.z = rawInput.y;
+
+        Debug.Log($"Entrada del jugador en hexadecimal: {BitConverter.ToString(BitConverter.GetBytes(rawInput.x))}");
     }
+
 
     private void Update()
     {

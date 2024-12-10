@@ -52,20 +52,22 @@ public class PlayerGrind : MonoBehaviour
     }
     void MovePlayerAlongRail()
     {
-        if (currentRailScript != null && onRail) //This is just some additional error checking.
+        if (currentRailScript != null && onRail)
         {
-            //Calculate a 0 to 1 normalised time value which is the progress along the rail.
-            //Elapsed time divided by the full time needed to traverse the spline will give you that value.
             float progress = elapsedTime / timeForFullSpline;
 
-            //If progress is less than 0, the player's position is before the start of the rail.
-            //If greater than 1, their position is after the end of the rail.
-            //In either case, the player has finished their grind.
             if (progress < 0 || progress > 1)
             {
                 ThrowOffRail();
                 return;
             }
+
+            float3 pos, tangent, up;
+            SplineUtility.Evaluate(currentRailScript.railSpline.Spline, progress, out pos, out tangent, out up);
+
+            Vector3 worldPos = currentRailScript.LocalToWorldConversion(pos);
+            Debug.Log($"Posición en hexadecimal: {BitConverter.ToString(BitConverter.GetBytes(worldPos.x))}");
+
             //The rest of this code will not execute if the player is thrown off.
 
             //Next Time Normalised is the player's progress value for the next update.
@@ -80,13 +82,11 @@ public class PlayerGrind : MonoBehaviour
 
             //Calculating the local positions of the player's current position and next position
             //using current progress and the progress for the next update.
-            float3 pos, tangent, up;
             float3 nextPosfloat, nextTan, nextUp;
             SplineUtility.Evaluate(currentRailScript.railSpline.Spline, progress, out pos, out tangent, out up);
             SplineUtility.Evaluate(currentRailScript.railSpline.Spline, nextTimeNormalised, out nextPosfloat, out nextTan, out nextUp);
 
             //Converting the local positions into world positions.
-            Vector3 worldPos = currentRailScript.LocalToWorldConversion(pos);
             Vector3 nextPos = currentRailScript.LocalToWorldConversion(nextPosfloat);
 
             //Setting the player's position and adding a height offset so that they're sitting on top of the rail
