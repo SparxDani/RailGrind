@@ -132,47 +132,77 @@ public class UDPManager : MonoBehaviour
 
         active = true;
     }
-
     void CalcularRotacion()
     {
-        
+        Vector3 rotation = vehicle.transform.eulerAngles;
 
-        Debug.Log("vehicle euler " + vehicle.eulerAngles);
+        //Debug.Log($"Rotación Original - X: {rotation.x}, Y: {rotation.y}, Z: {rotation.z}");
 
-        if (vehicle.eulerAngles.z > 0 && vehicle.eulerAngles.z < 180)
-        {
-            B = Mathf.Lerp(B, 150, Time.deltaTime * SmoothEngine); 
-            C = Mathf.Lerp(C, 50, Time.deltaTime * SmoothEngine);
-        }
-        else if (vehicle.eulerAngles.z >= 180 && vehicle.eulerAngles.z <= 360)
-        {
-            B = Mathf.Lerp(B, 50, Time.deltaTime * SmoothEngine); 
-            C = Mathf.Lerp(C, 150, Time.deltaTime * SmoothEngine); 
-        }
+        rotation.x = NormalizeAngle(rotation.x);
+        rotation.z = NormalizeAngle(rotation.z);
 
-        if (vehicle.eulerAngles.x > 0 && vehicle.eulerAngles.x < 180)
-        {
-            A = Mathf.Lerp(A, 150, Time.deltaTime * SmoothEngine); 
-        }
-        else if (vehicle.eulerAngles.x >= 180 && vehicle.eulerAngles.x <= 360)
-        {
-            A = Mathf.Lerp(A, 50, Time.deltaTime * SmoothEngine); 
-        }
+        //Debug.Log($"Rotación Normalizada - X: {rotation.x}, Y: {rotation.y}, Z: {rotation.z}");
 
-        if (A > 0)
-        {
-            if (B > 0 || C > 0)
-            {
-                float decrement = Time.deltaTime * SmoothEngine * (A / 100f);
+        A = Mathf.Clamp(100 - Mathf.Abs(rotation.x), 0, 200);
 
-                if (B > 0)
-                    B = Mathf.Max(B - decrement, 0);
+        B = Mathf.Clamp(100 - Mathf.Abs(rotation.z), 0, 200);
+        C = Mathf.Clamp(100 + Mathf.Abs(rotation.z), 0, 200);
 
-                if (C > 0)
-                    C = Mathf.Max(C - decrement, 0);
-            }
-        }
+        float diffA = A - 100;
+        B = Mathf.Clamp(B - diffA, 0, 200);
+        C = Mathf.Clamp(C - diffA, 0, 200);
+
+        Debug.Log($"Valores Calculados - A: {A}, B: {B}, C: {C}");
     }
+
+    float NormalizeAngle(float angle)
+    {
+        angle = angle % 360; 
+        if (angle > 180) angle -= 360; 
+        return angle;
+    }
+
+
+    //void CalcularRotacion()
+    //{
+
+
+    //    Debug.Log("vehicle euler " + vehicle.eulerAngles);
+
+    //    if (vehicle.eulerAngles.z > 0 && vehicle.eulerAngles.z < 180)
+    //    {
+    //        B = Mathf.Lerp(B, 150, Time.deltaTime * SmoothEngine); 
+    //        C = Mathf.Lerp(C, 50, Time.deltaTime * SmoothEngine);
+    //    }
+    //    else if (vehicle.eulerAngles.z >= 180 && vehicle.eulerAngles.z <= 360)
+    //    {
+    //        B = Mathf.Lerp(B, 50, Time.deltaTime * SmoothEngine); 
+    //        C = Mathf.Lerp(C, 150, Time.deltaTime * SmoothEngine); 
+    //    }
+
+    //    if (vehicle.eulerAngles.x > 0 && vehicle.eulerAngles.x < 180)
+    //    {
+    //        A = Mathf.Lerp(A, 150, Time.deltaTime * SmoothEngine); 
+    //    }
+    //    else if (vehicle.eulerAngles.x >= 180 && vehicle.eulerAngles.x <= 360)
+    //    {
+    //        A = Mathf.Lerp(A, 50, Time.deltaTime * SmoothEngine); 
+    //    }
+
+    //    if (A > 0)
+    //    {
+    //        if (B > 0 || C > 0)
+    //        {
+    //            float decrement = Time.deltaTime * SmoothEngine * (A / 100f);
+
+    //            if (B > 0)
+    //                B = Mathf.Max(B - decrement, 0);
+
+    //            if (C > 0)
+    //                C = Mathf.Max(C - decrement, 0);
+    //        }
+    //    }
+    //}
 
 
 

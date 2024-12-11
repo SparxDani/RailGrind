@@ -66,7 +66,7 @@ public class PlayerGrind : MonoBehaviour
             SplineUtility.Evaluate(currentRailScript.railSpline.Spline, progress, out pos, out tangent, out up);
 
             Vector3 worldPos = currentRailScript.LocalToWorldConversion(pos);
-            Debug.Log($"Posición en hexadecimal: {BitConverter.ToString(BitConverter.GetBytes(worldPos.x))}");
+            //Debug.Log($"Posición en hexadecimal: {BitConverter.ToString(BitConverter.GetBytes(worldPos.x))}");
 
            
             float nextTimeNormalised;
